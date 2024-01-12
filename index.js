@@ -32,7 +32,7 @@ inquirer
     {
         type: 'input',
         name: 'screeensshot',
-        message: 'If you would like to add screenshot add filepath here',
+        message: 'If you would like to add screenshot add filepath here and add screenshot to "img" folder',
     },
     {
         type: 'input',
@@ -112,7 +112,7 @@ ${answers.installation}
 ## Usage 
 ${answers.usage}
 
-![Screenshot](${answers.screenshot})
+![Screenshot](/img/${answers.screenshot})
 
 ## Usage 
 ${answers.credits}
