@@ -68,8 +68,28 @@ inquirer
     ])
     .then(answers => {
 
+        let badge = ''
+    switch (answers.license) {
+        case 'None':
+            badge = '';
+            break;
+        case 'APACHE 2.0': 
+            badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+            break;
+        case 'BSD 3': 
+            badge = '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
+            break; 
+        case 'GPL 3.0':
+            badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+            break;
+        case 'MIT':
+            badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+            break;
+        }
+
         let content = 
-`# ${answers.title} 
+` ${badge}
+# ${answers.title} 
 
 ## Descripion
 ${answers.description} 
@@ -114,8 +134,7 @@ If you have any additional question, you can find me on GitHub [${answers.questi
 
 or send me an email at: ${answers.questionsEmail}`
 
-        const filename = `${answers.title}-ReadMe.md`
 
-        fs.writeFile(filename, content, ((err) =>
+        fs.writeFile(`generated-readme/${answers.title}-Readme.md`, content, ((err) =>
         err ? console.log(err) : console.log('Success!')))
     });
