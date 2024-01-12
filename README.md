@@ -30,7 +30,7 @@ Then follow the questions.
 There are only 6 availabe Licenses for now, please choose None if your one is not available.
 Your new file will be saved to generared-readme folder 
 
-[Link to the step by step vido]()
+[Link to the step by step vido](https://youtu.be/WklJ3knh3sw)
 
 ## Usage 
 Thi applliaction is a README generator so that user can quickly create a professional README for a new project.
