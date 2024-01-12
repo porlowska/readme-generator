@@ -32,7 +32,7 @@ inquirer
     {
         type: 'input',
         name: 'screeensshot',
-        message: 'If you would like to add screenshot add filepath here and add screenshot to "img" folder',
+        message: 'If you would like to add screenshot add file with .png extention to "img" folder nad type the name here',
     },
     {
         type: 'input',
